@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+a,
+button {
+  font-family: $font-family;
+}

@@ -1,0 +1,38 @@
+.nav {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  background-color: $dirty-white-color;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 20px;
+  height: 70px;
+  overflow: hidden;
+  transition: 1s;
+
+  &--active {
+    height: 400px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,23 @@
+@mixin notebook {
+  @media (min-width: 1352px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin smallerTablet {
+  @media (min-width: 948px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
