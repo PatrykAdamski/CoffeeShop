@@ -4,7 +4,7 @@ import { ButtonHamburger } from "../hamburgerMenu/HamburgerMenu";
 import Logo from "../logo/Logo";
 import { UserNav } from "../userNav/UserNav";
 
-export default function Navigation() {
+export const Navigation = () => {
   const [isMenuActive, setMenuActive] = useState(false);
 
   const handleToggleMenuActive = () => {
@@ -34,4 +34,4 @@ export default function Navigation() {
       <UserNav />
     </nav>
   );
-}
+};

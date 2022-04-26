@@ -1,8 +1,9 @@
 .logo {
   font-size: 2rem;
   color: $primary-color;
+  cursor: pointer;
 
   & span {
-    color: $black-color;
+    color: $white-color;
   }
 }
