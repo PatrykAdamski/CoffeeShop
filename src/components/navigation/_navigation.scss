@@ -2,17 +2,21 @@
   position: sticky;
   display: flex;
   flex-direction: column;
-  background-color: $dirty-white-color;
+  background-color: $secondary-color;
   box-shadow: 0px 3px 6px #00000029;
   padding: 20px;
   height: 70px;
   overflow: hidden;
   transition: 1s;
+  z-index: 1;
   @include tablet {
     height: auto;
     flex-direction: row;
     justify-content: space-between;
     overflow: visible;
+  }
+  @include notebook {
+    justify-content: space-around;
   }
 
   &--active {
@@ -48,6 +52,7 @@
   &__item {
     padding: 1rem 0;
     transition: 0.3s;
+    color: $primary-color;
 
     @include tablet {
       padding: 0 1rem;
@@ -55,7 +60,7 @@
     @include notebook {
       &:hover {
         cursor: pointer;
-        color: $primary-color;
+        color: $white-color;
       }
     }
   }
