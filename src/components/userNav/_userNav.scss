@@ -1,0 +1,63 @@
+.user-nav {
+  @include tablet {
+    position: absolute;
+    top: 100px;
+    right: -200px;
+    background-color: $dirty-white-color;
+    width: 200px;
+    box-shadow: 0px 3px 6px #00000029;
+    padding-left: 30px;
+    transition: 1s;
+    &--active {
+      right: 0;
+    }
+  }
+
+  &__arrow {
+    @include tablet {
+      position: absolute;
+      top: calc(50% - 30px);
+      left: -35px;
+      width: 60px;
+      height: 60px;
+      background-color: $dirty-white-color;
+      box-shadow: -6px 1px 6px #00000029;
+      border-radius: 50%;
+      cursor: pointer;
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: calc(50% - 2px);
+        left: 5px;
+        width: 30px;
+        height: 3px;
+        background-color: $primary-color;
+        border-radius: 50%;
+      }
+      &::before {
+        transform-origin: 0 0;
+        transform: rotate(-35deg);
+        transition: 1s;
+      }
+
+      &::after {
+        transform-origin: 0 100%;
+        transform: rotate(35deg);
+        transition: 1s;
+      }
+    }
+  }
+}
+
+.user-nav--active {
+  ::before {
+    transform-origin: 50% 50%;
+    transform: rotate(-35deg);
+  }
+  ::after {
+    transform-origin: 50% 50%;
+    transform: rotate(35deg);
+  }
+}

@@ -2,12 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { ButtonHamburger } from "../hamburgerMenu/HamburgerMenu";
 import Logo from "../logo/Logo";
-import { UserNavItem } from "../userNavItem/UserNavItem";
-import {
-  faHeart,
-  faCartShopping,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { UserNav } from "../userNav/UserNav";
 
 export default function Navigation() {
   const [isMenuActive, setMenuActive] = useState(false);
@@ -35,12 +30,8 @@ export default function Navigation() {
           <li className="nav__item">Nowości</li>
           <li className="nav__item">Kontakt</li>
         </ul>
-        <div className="user-nav">
-          <UserNavItem nameIcon={faUser} text="Zaloguj się" />
-          <UserNavItem nameIcon={faHeart} text="Obserwowane" />
-          <UserNavItem nameIcon={faCartShopping} text="Koszyk" />
-        </div>
       </div>
+      <UserNav />
     </nav>
   );
 }

@@ -8,6 +8,12 @@
   height: 70px;
   overflow: hidden;
   transition: 1s;
+  @include tablet {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: visible;
+  }
 
   &--active {
     height: 400px;
@@ -23,6 +29,9 @@
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+    @include tablet {
+      flex-direction: row;
+    }
   }
 
   &__list {
@@ -30,9 +39,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include tablet {
+      flex-direction: row;
+    }
   }
 
   &__item {
     padding: 1rem 0;
+    transition: 0.3s;
+
+    @include tablet {
+      padding: 0 1rem;
+    }
+    @include notebook {
+      &:hover {
+        cursor: pointer;
+        color: $primary-color;
+      }
+    }
   }
 }

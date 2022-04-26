@@ -8,6 +8,9 @@
   cursor: pointer;
   width: 35px;
   height: 30px;
+  @include tablet {
+    display: none;
+  }
 
   &__bars:nth-child(1) {
     top: 0;
