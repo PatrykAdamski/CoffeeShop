@@ -16,13 +16,14 @@
   &__arrow {
     @include tablet {
       position: absolute;
-      top: calc(50% - 30px);
-      left: -35px;
-      width: 60px;
-      height: 60px;
+      top: calc(50% - 50px);
+      left: -60px;
+      width: 100px;
+      height: 100px;
       background-color: $secondary-color;
       box-shadow: -6px 1px 6px #00000029;
       border-radius: 50%;
+      z-index: -1;
       cursor: pointer;
       &::before,
       &::after {
@@ -30,7 +31,7 @@
         display: block;
         position: absolute;
         top: calc(50% - 2px);
-        left: 5px;
+        left: 15px;
         width: 30px;
         height: 3px;
         background-color: $primary-color;
