@@ -10,7 +10,13 @@
 @import "./generic/base";
 @import "./generic/scrollbar";
 
-//******** Components ********** @import @import
+//******** Animations **********
+
+@import "./animations/animationBrand";
+@import "./animations//animationArrow";
+
+//******** Components **********
+
 @import "../../components/navigation/navigation";
 @import "../../components/hamburgerMenu/hamburgerMenu";
 @import "../../components/logo/logo";
@@ -20,3 +26,4 @@
 @import "../../components/header/header";
 @import "../../components/aboutUs/aboutUs";
 @import "../../components/carouselBrand/carouselBrand";
+@import "../../components/benefits/benefits";
