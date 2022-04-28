@@ -8,8 +8,9 @@
 
 //******** Base **********
 @import "./generic/base";
+@import "./generic/scrollbar";
 
-//******** Components **********
+//******** Components ********** @import @import
 @import "../../components/navigation/navigation";
 @import "../../components/hamburgerMenu/hamburgerMenu";
 @import "../../components/logo/logo";
