@@ -36,6 +36,11 @@
         height: 3px;
         background-color: $primary-color;
         border-radius: 50%;
+        animation-name: animationArrow;
+        animation-duration: 5s;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
       }
       &::before {
         transform-origin: 0 0;
@@ -60,5 +65,10 @@
   ::after {
     transform-origin: 50% 50%;
     transform: rotate(35deg);
+  }
+
+  ::before,
+  ::after {
+    animation-play-state: paused;
   }
 }
