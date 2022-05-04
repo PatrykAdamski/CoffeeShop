@@ -10,7 +10,7 @@
   overflow: hidden;
   transition: 1s;
   z-index: 1;
-  // border-bottom: 2px solid $primary-color;
+
   @include tablet {
     height: auto;
     flex-direction: row;
