@@ -27,7 +27,27 @@ export const Footer = () => {
           <Logo></Logo>
           <p>Najlepsza kawa w polsce.</p>
         </div>
-        <Accordion data={footerAccordion}></Accordion>
+        <div className="footer__accordion--mobile-visible">
+          <Accordion data={footerAccordion}></Accordion>
+        </div>
+        <div className="footer--desktop-visible">
+          {footerAccordion.map((item) => {
+            return (
+              <div className="footer__column">
+                <p className="footer__title">{item.title}</p>
+                <ul className="footer__list">
+                  {item.listItems.map((el) => {
+                    return (
+                      <a className="footer__item" href="/#">
+                        {el}
+                      </a>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <div className="footer__bottom-part">
