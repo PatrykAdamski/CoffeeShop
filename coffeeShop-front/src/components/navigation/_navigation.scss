@@ -1,0 +1,69 @@
+.nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-color;
+  box-shadow: 0px 5px 6px $secondary-color;
+  padding: 20px;
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  transition: 1s;
+  z-index: 1;
+
+  @include tablet {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: visible;
+  }
+  @include notebook {
+    justify-content: space-around;
+  }
+
+  &--active {
+    height: 400px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    padding: 1rem 0;
+    transition: 0.3s;
+    color: $primary-color;
+
+    @include tablet {
+      padding: 0 1rem;
+    }
+    @include notebook {
+      &:hover {
+        cursor: pointer;
+        color: $white-color;
+      }
+    }
+  }
+}

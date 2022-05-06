@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  @include desktop {
+    font-size: 18px;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a,
+button {
+  font-family: $font-family;
+}
+a {
+  text-decoration: none;
+}
+
+.base {
+  &__ornament {
+    background-image: url(../../images/CoffeeOrnament.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 90%;
+    height: 30px;
+  }
+}
