@@ -1,0 +1,31 @@
+.btn {
+  outline: none;
+  border: none;
+  color: $white-color;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0px 6px 6px $text-color;
+  transition: 0.3s;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $primary-color;
+    &:hover {
+      background-color: #744627;
+    }
+  }
+  &--secondary {
+    background-color: $secondary-color;
+    &:hover {
+      background-color: #b38541;
+    }
+  }
+  &--normal {
+    padding: 20px 40px;
+  }
+  &--large {
+    padding: 25px 70px;
+    font-size: 1.1rem;
+  }
+}

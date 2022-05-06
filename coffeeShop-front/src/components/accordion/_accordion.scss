@@ -1,0 +1,45 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 55px;
+  overflow: hidden;
+  background-color: $primary-color;
+  border-radius: 6px;
+  transition: 1s;
+
+  &--active {
+    height: 200px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    width: 95vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon-arrow {
+    position: absolute;
+    right: 15px;
+    font-size: 1.3rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & a {
+      padding: 10px;
+      color: $white-color;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+}
