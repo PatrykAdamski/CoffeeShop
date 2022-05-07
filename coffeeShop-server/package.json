@@ -1,10 +1,11 @@
 {
-  "name": "coffeeShop",
+  "name": "coffee-shop",
   "version": "1.0.0",
   "main": "src/app.js",
   "scripts": {
     "lint": "eslint \"src/**/*.js\" \"e2e-tests/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
+    "populate": "node --experimental-modules --es-module-specifier-resolution=node --no-warnings src/internals/populate.js",
     "start": "nodemon --experimental-modules --es-module-specifier-resolution=node --no-warnings src/app.js",
     "test": "jest --runInBand --detectOpenHandles"
   },
