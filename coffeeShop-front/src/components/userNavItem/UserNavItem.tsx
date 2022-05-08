@@ -1,6 +1,6 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconLookup } from "@fortawesome/fontawesome-svg-core";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconLookup } from '@fortawesome/fontawesome-svg-core';
 
 interface IconPropp {
   nameIcon: IconLookup;

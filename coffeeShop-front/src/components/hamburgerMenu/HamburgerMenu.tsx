@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface ButtonHamburgerProps {
   isMenuActive: boolean;
@@ -11,7 +11,7 @@ export const ButtonHamburger: React.FC<ButtonHamburgerProps> = ({
 }) => {
   return (
     <button
-      className={`hamburger ${isMenuActive ? "hamburger--active" : ""}`}
+      className={`hamburger ${isMenuActive ? 'hamburger--active' : ''}`}
       onClick={handleToggleMenuActive}
     >
       <span className="hamburger__bars bars"></span>

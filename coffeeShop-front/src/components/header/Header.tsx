@@ -1,5 +1,5 @@
-import React from "react";
-import { Button } from "../button/Button";
+import React from 'react';
+import { Button } from '../button/Button';
 
 export const Header = () => {
   return (

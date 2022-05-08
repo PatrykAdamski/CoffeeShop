@@ -1,20 +1,19 @@
-import React from "react";
-import { Navigation } from "../../components/navigation/Navigation";
-import { Header } from "../../components/header/Header";
-import { AboutUs } from "../../components/aboutUs/AboutUs";
-import { CarouselBrand } from "../../components/carouselBrand/CarouselBrand";
-import { Benefits } from "../../components/benefits/Benefits";
-import { Footer } from "../../components/footer/Footer";
+import React from 'react';
+import { Navigation } from '../../components/navigation/Navigation';
+import { Homepage } from '../homepage/Homepage';
+import { Shop } from '../shop/Shop';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function Root() {
   return (
     <>
-      <Navigation />
-      <Header />
-      <CarouselBrand />
-      <AboutUs />
-      <Benefits />
-      <Footer />
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Homepage />}></Route>
+          <Route path="shop" element={<Shop />}></Route>
+        </Routes>
+      </Router>
     </>
   );
 }

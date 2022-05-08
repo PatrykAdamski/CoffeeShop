@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { AccordionItem } from "./AccordionItem";
+import React, { useState } from 'react';
+import { AccordionItem } from './AccordionItem';
 
 type AccordionProps = { data: { title: string; listItems: string[] }[] };
 
@@ -18,6 +18,7 @@ export const Accordion = ({ data }: AccordionProps) => {
       {data.map((item, index) => {
         return (
           <AccordionItem
+            key={index}
             index={index + 1}
             handleToggle={handleToggle}
             isActive={clickedAccordionItem === index + 1}

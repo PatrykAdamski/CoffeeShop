@@ -1,22 +1,22 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import Logo from "../logo/Logo";
-import { Accordion } from "../accordion/Accordion";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Logo from '../logo/Logo';
+import { Accordion } from '../accordion/Accordion';
 
 export const Footer = () => {
   const footerAccordion = [
     {
-      title: "Informacje",
-      listItems: ["Strona główna", "O nas", "Regulamin"],
+      title: 'Informacje',
+      listItems: ['Strona główna', 'O nas', 'Regulamin'],
     },
     {
-      title: "Konto",
-      listItems: ["Ustawienia konta"],
+      title: 'Konto',
+      listItems: ['Ustawienia konta'],
     },
     {
-      title: "Kontakt",
-      listItems: ["Formularz kontaktowy", "Dane kontaktowe"],
+      title: 'Kontakt',
+      listItems: ['Formularz kontaktowy', 'Dane kontaktowe'],
     },
   ];
 
@@ -33,12 +33,12 @@ export const Footer = () => {
         <div className="footer--desktop-visible">
           {footerAccordion.map((item) => {
             return (
-              <div className="footer__column">
+              <div key={item.title} className="footer__column">
                 <p className="footer__title">{item.title}</p>
                 <ul className="footer__list">
                   {item.listItems.map((el) => {
                     return (
-                      <a className="footer__item" href="/#">
+                      <a key={el} className="footer__item" href="/#">
                         {el}
                       </a>
                     );
