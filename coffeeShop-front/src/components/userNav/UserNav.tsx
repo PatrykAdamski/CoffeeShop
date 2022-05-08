@@ -1,17 +1,17 @@
-import React from "react";
-import { UserNavItem } from "../userNavItem/UserNavItem";
-import { useState } from "react";
+import React from 'react';
+import { UserNavItem } from '../userNavItem/UserNavItem';
+import { useState } from 'react';
 import {
   faHeart,
   faCartShopping,
   faUser,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
 export const UserNav = () => {
   const [isActiveUserNav, setActiveUserNav] = useState(false);
 
   return (
-    <div className={`user-nav ${isActiveUserNav ? "user-nav--active" : ""}`}>
+    <div className={`user-nav ${isActiveUserNav ? 'user-nav--active' : ''}`}>
       <div
         onClick={() => setActiveUserNav(!isActiveUserNav)}
         className="user-nav__arrow"

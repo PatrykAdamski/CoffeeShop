@@ -1,0 +1,37 @@
+.slider {
+  position: relative;
+  display: flex;
+  margin-top: 90px;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__left-arrow,
+  &__right-arrow {
+    position: absolute;
+    top: calc(50% - 16px);
+    font-size: 2rem;
+    color: $secondary-color;
+    z-index: 1;
+  }
+  &__left-arrow {
+    left: 5%;
+  }
+  &__right-arrow {
+    right: 5%;
+  }
+
+  &__slide {
+    opacity: 0;
+    transition: 0.3s;
+
+    &--active {
+      opacity: 1;
+      transition: 1s;
+      transform: scale(1.02);
+    }
+  }
+}

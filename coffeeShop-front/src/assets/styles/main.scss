@@ -1,31 +1,35 @@
 //******** Reset **********
-@import "./settings/reset";
+@import './settings/reset';
 
 //******** Settings **********
-@import "./settings/colors";
-@import "./settings/font";
-@import "./settings/mixins";
+@import './settings/colors';
+@import './settings/font';
+@import './settings/mixins';
 
 //******** Base **********
-@import "./generic/base";
-@import "./generic/scrollbar";
+@import './generic/base';
+@import './generic/scrollbar';
 
 //******** Animations **********
 
-@import "./animations/animationBrand";
-@import "./animations//animationArrow";
+@import './animations/animationBrand';
+@import './animations//animationArrow';
 
 //******** Components **********
 
-@import "../../components/navigation/navigation";
-@import "../../components/hamburgerMenu/hamburgerMenu";
-@import "../../components/logo/logo";
-@import "../../components/button/button";
-@import "../../components/userNav/userNav";
-@import "../../components/userNavItem/userNavItem";
-@import "../../components/header/header";
-@import "../../components/aboutUs/aboutUs";
-@import "../../components/carouselBrand/carouselBrand";
-@import "../../components/benefits/benefits";
-@import "../../components/accordion/accordion";
-@import "../../components/footer/footer";
+@import '../../components/navigation/navigation';
+@import '../../components/hamburgerMenu/hamburgerMenu';
+@import '../../components/logo/logo';
+@import '../../components/button/button';
+@import '../../components/userNav/userNav';
+@import '../../components/userNavItem/userNavItem';
+@import '../../components/header/header';
+@import '../../components/aboutUs/aboutUs';
+@import '../../components/carouselBrand/carouselBrand';
+@import '../../components/benefits/benefits';
+@import '../../components/accordion/accordion';
+@import '../../components/footer/footer';
+
+//******** SectionShop **********
+
+@import '../../components/imageSlider/imageSlider';

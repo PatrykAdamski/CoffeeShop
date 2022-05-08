@@ -1,8 +1,10 @@
-import React from "react";
-import { useState } from "react";
-import { ButtonHamburger } from "../hamburgerMenu/HamburgerMenu";
-import Logo from "../logo/Logo";
-import { UserNav } from "../userNav/UserNav";
+import React from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import { ButtonHamburger } from '../hamburgerMenu/HamburgerMenu';
+import Logo from '../logo/Logo';
+import { UserNav } from '../userNav/UserNav';
 
 export const Navigation = () => {
   const [isMenuActive, setMenuActive] = useState(false);
@@ -14,7 +16,7 @@ export const Navigation = () => {
   return (
     <nav
       className={`nav
-    ${isMenuActive ? "nav--active" : ""}`}
+    ${isMenuActive ? 'nav--active' : ''}`}
     >
       <div className="nav__container">
         <Logo />
@@ -25,10 +27,18 @@ export const Navigation = () => {
       </div>
       <div className="nav__container-list">
         <ul className="nav__list">
-          <li className="nav__item">Strona Główna</li>
-          <li className="nav__item">Sklep</li>
-          <li className="nav__item">Nowości</li>
-          <li className="nav__item">Kontakt</li>
+          <Link to="/" className="nav__item">
+            Strona Główna
+          </Link>
+          <Link to="/shop" className="nav__item">
+            Sklep
+          </Link>
+          <Link to="/new" className="nav__item">
+            Nowości
+          </Link>
+          <Link to="/contact" className="nav__item">
+            Kontakt
+          </Link>
         </ul>
       </div>
       <UserNav />
