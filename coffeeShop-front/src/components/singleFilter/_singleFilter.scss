@@ -1,0 +1,48 @@
+.single-filter {
+  position: relative;
+  width: 90%;
+  margin: 1rem;
+  background-color: $secondary-color;
+  cursor: pointer;
+
+  @include tablet {
+    width: 250px;
+  }
+  @include desktop {
+    width: 300px;
+  }
+
+  &__arrow {
+    font-size: 1.5rem;
+    position: absolute;
+    top: calc(50% - 0.75rem);
+    right: 7%;
+    color: $white-color;
+  }
+
+  &__title {
+    display: block;
+    color: $white-color;
+    padding: 15px 20px;
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: $white-color;
+    border: 1px solid $secondary-color;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__option {
+    padding: 5px 0;
+  }
+}
