@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
+import { ProductsContext } from '../../providers/ProductsProvider';
+import { IProductsContextType } from '../../types/IProductsContextType';
+
+import { getFilterByCategoriesProducts } from '../../api/apiProducts';
 
 interface FilterProps {
   title: string;
@@ -9,6 +14,8 @@ interface FilterProps {
 
 export const SingleFilter: React.FC<FilterProps> = ({ title, options }) => {
   const [activeFilter, setActiveFilter] = useState(false);
+
+  const { setProducts } = useContext(ProductsContext) as IProductsContextType;
 
   const filterToggle = () => {
     setActiveFilter(!activeFilter);
@@ -28,7 +35,11 @@ export const SingleFilter: React.FC<FilterProps> = ({ title, options }) => {
       >
         {options.map((option, index) => {
           return (
-            <li key={index} className="single-filter__option">
+            <li
+              key={index}
+              onClick={() => getFilterByCategoriesProducts(setProducts, option)}
+              className="single-filter__option"
+            >
               {option}
             </li>
           );

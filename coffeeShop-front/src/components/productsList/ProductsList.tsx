@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Product } from '../product/Product';
 import { SingleFilter } from '../singleFilter/SingleFilter';
+import { getAllProducts } from '../../api/apiProducts';
+import { ProductsContext } from '../../providers/ProductsProvider';
+import { IProductsContextType } from '../../types/IProductsContextType';
 
 export const ProductsList = () => {
+  const { products, setProducts } = useContext(
+    ProductsContext
+  ) as IProductsContextType;
+
+  useEffect(() => {
+    getAllProducts(setProducts);
+  }, []);
+
   return (
     <section className="products">
       <div className="filters">
@@ -21,34 +32,13 @@ export const ProductsList = () => {
         <h3 className="products__title">Kawa</h3>
         <div className="base__ornament"></div>
         <div className="products__container">
-          <Product
-            image={
-              'https://sklepzkawa24.pl/environment/cache/images/300_300_productGfx_1004/kawa-ziarnista-bueno-momento.jpg'
-            }
-            name="Kawa ziarnista JACOBS 1000g"
-            price="49.99"
-          />
-          <Product
-            image={
-              'https://sklepzkawa24.pl/environment/cache/images/300_300_productGfx_1004/kawa-ziarnista-bueno-momento.jpg'
-            }
-            name="Kawa ziarnista JACOBS 1000g"
-            price="49.99"
-          />
-          <Product
-            image={
-              'https://sklepzkawa24.pl/environment/cache/images/300_300_productGfx_1004/kawa-ziarnista-bueno-momento.jpg'
-            }
-            name="Kawa ziarnista JACOBS 1000g"
-            price="49.99"
-          />
-          <Product
-            image={
-              'https://sklepzkawa24.pl/environment/cache/images/300_300_productGfx_1004/kawa-ziarnista-bueno-momento.jpg'
-            }
-            name="Kawa ziarnista JACOBS 1000g"
-            price="49.99"
-          />
+          {products.length ? (
+            products.map((product) => (
+              <Product key={product._id} {...product} />
+            ))
+          ) : (
+            <h2>Nie znaleziono produktów</h2>
+          )}
         </div>
       </div>
     </section>

@@ -1,5 +1,12 @@
 export interface IProduct {
-  image: string;
+  _id: string;
   name: string;
-  price: string;
+  brand: string;
+  description: string;
+  available: number;
+  unitPrice: number;
+  grammage: number;
+  img: string;
+  isSale: boolean;
+  categories: string[];
 }
