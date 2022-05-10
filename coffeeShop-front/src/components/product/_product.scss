@@ -1,13 +1,24 @@
 .product {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  width: 300px;
 
   &__name {
     text-align: center;
     font-size: 1.3rem;
     margin-top: 1rem;
+  }
+
+  &__categories {
+    margin-top: 15px;
+  }
+
+  img {
+    width: 200px;
+    height: 280px;
   }
 
   &__price {
