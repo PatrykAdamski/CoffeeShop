@@ -19,7 +19,6 @@ export const getFilterByCategoriesProducts = (
   setProducts: React.Dispatch<React.SetStateAction<IProduct[]>>,
   queries: { categorie: string; price: number }
 ) => {
-  console.log(queries);
   api
     .get<Array<IProduct>>(
       `${endpoints.products}/all/?categories=${queries.categorie}&price=${queries.price}`
