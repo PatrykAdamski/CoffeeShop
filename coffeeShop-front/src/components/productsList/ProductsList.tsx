@@ -25,12 +25,12 @@ export const ProductsList = () => {
   };
 
   useEffect(() => {
-    getFilterByCategoriesProducts(setProducts, queries);
-  }, [queries]);
-
-  useEffect(() => {
     getAllProducts(setProducts);
   }, []);
+
+  useEffect(() => {
+    getFilterByCategoriesProducts(setProducts, queries);
+  }, [queries]);
 
   return (
     <section className="products">
