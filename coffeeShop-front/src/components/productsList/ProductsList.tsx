@@ -1,14 +1,32 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Product } from '../product/Product';
 import { SingleFilter } from '../singleFilter/SingleFilter';
 import { getAllProducts } from '../../api/apiProducts';
 import { ProductsContext } from '../../providers/ProductsProvider';
 import { IProductsContextType } from '../../types/IProductsContextType';
 
+import { getFilterByCategoriesProducts } from '../../api/apiProducts';
+
 export const ProductsList = () => {
   const { products, setProducts } = useContext(
     ProductsContext
   ) as IProductsContextType;
+
+  const [queries, setQueries] = useState({
+    categorie: '',
+    price: 0,
+  });
+
+  const filtersHandler = (e: any) => {
+    setQueries({
+      ...queries,
+      [e.target.id]: e.target.attributes.value.value,
+    });
+  };
+
+  useEffect(() => {
+    getFilterByCategoriesProducts(setProducts, queries);
+  }, [queries]);
 
   useEffect(() => {
     getAllProducts(setProducts);
@@ -18,14 +36,42 @@ export const ProductsList = () => {
     <section className="products">
       <div className="filters">
         <p className="filters__title">Opcje przeglądania</p>
-        <SingleFilter
-          title={'Kategorie: (wybierz)'}
-          options={['Kawa ziarnista', 'Kawa mielona']}
-        />
-        <SingleFilter
-          title={'Cena: (wybierz)'}
-          options={['Cena rosnąco', 'Cena malejąco']}
-        />
+        <SingleFilter title={'Kategorie: (wybierz)'}>
+          <li
+            id="categorie"
+            value={'Kawa ziarnista'}
+            onClick={filtersHandler}
+            className="single-filter__option"
+          >
+            Kawa ziarnista
+          </li>
+          <li
+            id="categorie"
+            value={'Kawa mielona'}
+            onClick={filtersHandler}
+            className="single-filter__option"
+          >
+            Kawa mielona
+          </li>
+        </SingleFilter>
+        <SingleFilter title={'Cena: (wybierz)'}>
+          <li
+            id="price"
+            value={1}
+            onClick={filtersHandler}
+            className="single-filter__option"
+          >
+            Cena rosnąco
+          </li>
+          <li
+            id="price"
+            value={-1}
+            onClick={filtersHandler}
+            className="single-filter__option"
+          >
+            Cena malejąco
+          </li>
+        </SingleFilter>
       </div>
 
       <div className="products__box">
