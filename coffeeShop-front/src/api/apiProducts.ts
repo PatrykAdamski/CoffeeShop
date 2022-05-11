@@ -17,10 +17,13 @@ export const getAllProducts = (
 
 export const getFilterByCategoriesProducts = (
   setProducts: React.Dispatch<React.SetStateAction<IProduct[]>>,
-  categories: string
+  queries: { categorie: string; price: number }
 ) => {
+  console.log(queries);
   api
-    .get<Array<IProduct>>(`${endpoints.products}/all/?categories=${categories}`)
+    .get<Array<IProduct>>(
+      `${endpoints.products}/all/?categories=${queries.categorie}&price=${queries.price}`
+    )
     .then(({ data }) => {
       setProducts(data);
     })
