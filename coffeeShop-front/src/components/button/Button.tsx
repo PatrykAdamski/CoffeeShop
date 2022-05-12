@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface buttonProps {
   size: string;
-  textInside: string;
+  children: ReactNode;
   color?: string;
+  onClick?: () => void;
 }
 
-export const Button: React.FC<buttonProps> = ({ size, color, textInside }) => {
+export const Button: React.FC<buttonProps> = ({
+  size,
+  color,
+  onClick,
+  children,
+}) => {
   return (
-    <button className={`btn btn--${size} btn--${color}`}>{textInside}</button>
+    <button
+      onClick={onClick ? onClick : undefined}
+      className={`btn btn--${size} btn--${color}`}
+    >
+      {children}
+    </button>
   );
 };
