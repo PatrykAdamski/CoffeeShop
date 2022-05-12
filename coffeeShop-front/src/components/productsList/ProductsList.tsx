@@ -6,8 +6,15 @@ import { ProductsContext } from '../../providers/ProductsProvider';
 import { IProductsContextType } from '../../types/IProductsContextType';
 
 import { getFilterByCategoriesProducts } from '../../api/apiProducts';
+import { IProduct } from 'types/IProduct';
 
-export const ProductsList = () => {
+interface IProductsListProps {
+  handleOpenProductDetails: (data: IProduct) => void;
+}
+
+export const ProductsList: React.FC<IProductsListProps> = ({
+  handleOpenProductDetails,
+}) => {
   const { products, setProducts } = useContext(
     ProductsContext
   ) as IProductsContextType;
@@ -80,7 +87,13 @@ export const ProductsList = () => {
         <div className="products__container">
           {products.length ? (
             products.map((product) => (
-              <Product key={product._id} {...product} />
+              <Product
+                onClick={() => {
+                  handleOpenProductDetails(product);
+                }}
+                key={product._id}
+                {...product}
+              />
             ))
           ) : (
             <h2>Nie znaleziono produktów</h2>

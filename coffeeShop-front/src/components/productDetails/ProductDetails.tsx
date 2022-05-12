@@ -1,16 +1,13 @@
 import React from 'react';
+import { IProduct } from 'types/IProduct';
 import { Button } from '../button/Button';
-import { IProduct } from '../../types/IProduct';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-
-export const Product: React.FC<IProduct> = ({
-  name,
-  unitPrice,
+export const ProductDetails: React.FC<IProduct> = ({
   img,
+  name,
   categories,
-  onClick,
+  unitPrice,
+  description,
 }) => {
   return (
     <div className="product">
@@ -18,13 +15,8 @@ export const Product: React.FC<IProduct> = ({
       <h4 className="product__name">{name}</h4>
       <p className="product__categories">{categories}</p>
       <p className="product__price">{unitPrice} zł</p>
+      <p className="product__description">{description}</p>
       <div className="product__buttons-box">
-        <div onClick={onClick} className="product__magnifier">
-          <FontAwesomeIcon
-            className="product__magnifier-icon"
-            icon={faMagnifyingGlass}
-          />
-        </div>
         <Button size="normal" color="primary">
           Do koszyka
         </Button>

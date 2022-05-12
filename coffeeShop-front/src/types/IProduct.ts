@@ -9,4 +9,5 @@ export interface IProduct {
   img: string;
   isSale: boolean;
   categories: string[];
+  onClick?: () => void;
 }
