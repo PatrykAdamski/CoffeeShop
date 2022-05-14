@@ -3,7 +3,6 @@
   display: flex;
   margin-top: 90px;
   height: auto;
-
   img {
     width: 100%;
     height: auto;
@@ -25,8 +24,9 @@
   }
 
   &__slide {
-    opacity: 0;
+    opacity: 1;
     transition: 0.3s;
+    height: 29vw;
 
     &--active {
       opacity: 1;

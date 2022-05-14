@@ -25,7 +25,6 @@ export const Shop = () => {
 
   const handleOpenProductDetails = (data: IProduct) => {
     handleOpenModal();
-    console.log(data);
     setCurrentProduct(data);
   };
 

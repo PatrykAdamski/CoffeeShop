@@ -27,9 +27,9 @@ export const Modal: React.FC<IModalProps> = ({ handleClose, children }) => {
   return ReactDOM.createPortal(
     <div className="modal">
       {children}
-      <Button onClick={handleClose} size="normal" color="secondary">
-        Zamknij
-      </Button>
+      <div onClick={handleClose} className="modal__close-button">
+        X
+      </div>
     </div>,
     modalNode
   );

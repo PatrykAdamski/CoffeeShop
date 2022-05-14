@@ -37,3 +37,7 @@ a {
     height: 30px;
   }
 }
+
+.root__modal--active {
+  filter: blur(3px) grayscale(80%);
+}
