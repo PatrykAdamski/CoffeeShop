@@ -10,17 +10,17 @@ export const ProductDetails: React.FC<IProduct> = ({
   description,
 }) => {
   return (
-    <div className="product">
-      <img alt="product" src={img}></img>
-      <h4 className="product__name">{name}</h4>
-      <p className="product__categories">{categories}</p>
-      <p className="product__price">{unitPrice} zł</p>
-      <p className="product__description">{description}</p>
-      <div className="product__buttons-box">
-        <Button size="normal" color="primary">
-          Do koszyka
-        </Button>
+    <>
+      <div className="product-details">
+        <img className="product-details__img" alt="product" src={img}></img>
+        <h4 className="product-details__name">{name}</h4>
+        <p className="product-details__categories">{categories}</p>
+        <p className="product-details__price">{unitPrice} zł</p>
+        <p className="product-details__description">{description}</p>
       </div>
-    </div>
+      <Button size="normal" color="primary">
+        Do koszyka
+      </Button>
+    </>
   );
 };

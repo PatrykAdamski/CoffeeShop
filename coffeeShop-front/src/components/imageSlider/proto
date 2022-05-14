@@ -1,0 +1,18 @@
+      <div
+        className={`slider__slide ${
+          index === current ? 'slider__slide--active' : ''
+        }`}
+        key={index}
+      ></div>
+      {slides.map((slide, index) => {
+        return (
+          <>
+            {index === current && (
+              <img src={slide.image} alt="slide" key={index}></img>
+            )}
+          </>
+        );
+      })}
+    </section>
+  );
+};
