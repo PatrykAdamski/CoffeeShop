@@ -3,7 +3,7 @@
 This is the project I am currently working on. 
 CoffeeShop is fullstack single page application where you can buy your favorite coffee.
 
-##Feautures
+## Feautures
 
 * Responsive design
 * Router between homepage and shop site
@@ -13,7 +13,7 @@ CoffeeShop is fullstack single page application where you can buy your favorite 
 * Carousel with offer which change automatically
 * Now i working on view and functionality cart
 
-##Technologies used
+## Technologies used
 
 <p align="left">
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a>
@@ -27,7 +27,7 @@ CoffeeShop is fullstack single page application where you can buy your favorite 
 <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mongodb-colored.svg" width="36" height="36" alt="MongoDB" /></a>
 </p>
 
-##Install
+## Install
 
 Run `npm install` in "CoffeeShop-server" and "CoffeeShop-front" folder.
 Run `npm run populate` in "CoffeeShop-server" for populate MongoDB.
